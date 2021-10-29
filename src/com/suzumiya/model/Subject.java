@@ -1,6 +1,6 @@
-package com.yzx.model;
+package com.suzumiya.model;
 
-import com.yzx.model.user.Course;
+import com.suzumiya.model.user.Course;
 
 import java.util.List;
 
@@ -29,11 +29,11 @@ public class Subject {
     public Subject() {
     }
 
-    public int getprof_id() {
+    public int getProf_id() {
         return prof_id;
     }
 
-    public void setprof_id(int prof_id) {
+    public void setProf_id(int prof_id) {
         this.prof_id = prof_id;
     }
 
@@ -109,19 +109,19 @@ public class Subject {
         this.course = course;
     }
 
-    public String getprofessor() {
+    public String getProfessor() {
         return professor;
     }
 
-    public void setprofessor(String professor) {
+    public void setProfessor(String professor) {
         this.professor = professor;
     }
 
-    public String getteaching_assistant() {
+    public String getTeaching_assistant() {
         return teaching_assistant;
     }
 
-    public void setteaching_assistant(String teaching_assistant) {
+    public void setTeaching_assistant(String teaching_assistant) {
         this.teaching_assistant = teaching_assistant;
     }
 
@@ -157,11 +157,11 @@ public class Subject {
         this.offer_unit = offer_unit;
     }
 
-    public String getAim() {
+    public String getDescription() {
         return description;
     }
 
-    public void setAim(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
