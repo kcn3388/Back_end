@@ -15,7 +15,7 @@
 
     <bean id="templateResolver"
           class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
-        <property name="prefix" value="com/yzx/templates/"/>
+        <property name="prefix" value="com/suzumiya/templates/"/>
         <property name="suffix" value=".html"/>
         <property name="templateMode" value="HTML"/>
         <property name="cacheable" value="true"/>
@@ -55,32 +55,32 @@
         <constructor-arg name="poolConfig" ref="jedisPoolConfig" />
     </bean>
 
-    <bean id="redisDao" class="com.yzx.dao.RedisDao">
+    <bean id="redisDao" class="com.suzumiya.dao.RedisDao">
         <property name="jedisPool" ref="jedisPool" />
     </bean>
 
     <!-- Settings for different Dao -->
-    <bean id="userDao" class="com.yzx.dao.UserDao">
+    <bean id="userDao" class="com.suzumiya.dao.UserDao">
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
-    <bean id="subjectDao" class="com.yzx.dao.SubjectDao">
+    <bean id="subjectDao" class="com.suzumiya.dao.SubjectDao">
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
-    <bean id="courseDao" class="com.yzx.dao.CourseDao">
+    <bean id="courseDao" class="com.suzumiya.dao.CourseDao">
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 
 
     <!-- Service Beans -->
-    <bean class="com.yzx.service.UserService" id="userService">
+    <bean class="com.suzumiya.service.UserService" id="userService">
         <property name="redisDao" ref="redisDao" />
         <property name="userDao" ref="userDao" />
     </bean>
-    <bean class="com.yzx.service.SubjectService" id="subjectService">
+    <bean class="com.suzumiya.service.SubjectService" id="subjectService">
         <property name="redisDao" ref="redisDao" />
         <property name="subjectDao" ref="subjectDao" />
     </bean>
-    <bean class="com.yzx.service.CourseService" id="courseService">
+    <bean class="com.suzumiya.service.CourseService" id="courseService">
         <property name="redisDao" ref="redisDao" />
         <property name="courseDao" ref="courseDao" />
     </bean>
