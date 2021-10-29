@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.yzx.model"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="com/yzx/mapper/UserMapper.xml" />
+        <mapper resource="com/yzx/mapper/SubjectMapper.xml" />
+        <mapper resource="com/yzx/mapper/CourseMapper.xml" />
+    </mappers>
+</configuration>
